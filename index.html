@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exotic Events</title>
+    <style>
+        /* Reset some default styles for better control */
+        body, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .h1 {
+            text-shadow: black 4px 5px 3px;
+            animation: exotic 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+            color: #fff;
+            font-size: 5vw; /* Adjust font size based on viewport width */
+        }
+
+        @keyframes exotic {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .h2 {
+            text-shadow: black 4px 5px 3px;
+            font-size: 3vw; /* Adjust font size based on viewport width */
+        }
+
+        /* Set a unique background gradient */
+        body {
+            background: linear-gradient(45deg, #ff5f6d, #ffc371);
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        /* Style the header */
+        header {
+            text-align: center;
+            padding: 100px; /* Adjust padding based on viewport width */
+        }
+
+        /* Style the main content */
+        .content {
+            text-align: center;
+            padding: 10vw 0; /* Adjust padding based on viewport width */
+        }
+
+        h2 {
+            font-size: 4vw; /* Adjust font size based on viewport width */
+            color: #fff;
+        }
+
+        p {
+            font-size: 2.5vw; /* Adjust font size based on viewport width */
+            color: #fff;
+            margin: 2vw 0; /* Adjust margin based on viewport width */
+        }
+
+        /* Style the call-to-action button */
+        .cta-button {
+            font-size: 25px;
+            display: inline-block;
+            padding: 3vw 6vw; /* Adjust padding based on viewport width */
+            background-color: #fff;
+            color: #ff5f6d;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #ff8888;
+            color: white; border: black solid 1px; 
+        }
+
+        /* Style the footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 2vw 0; /* Adjust padding based on viewport width */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="h1">Exotic Events</h1>
+    </header>
+    
+    <div class="content">
+        <h2 class="h2">Welcome to Kalyan Multi-Business</h2>
+        <p>"Transforming Spaces, Creating Memories: Your Event, Our Decoration!"</p>
+        <a href="GETSTART.html" class="cta-button">Get Started</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Kalyan Group</p>
+    </footer>
+
+    <script>
+        // JavaScript code goes here
+        document.addEventListener('DOMContentLoaded', function () {
+            const contactForm = document.getElementById('contact-form');
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                alert('Form submitted!');
+            });
+        });
+    </script>
+</body>
+</html>

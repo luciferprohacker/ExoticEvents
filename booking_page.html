@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decoration Order Booking</title>
+    <style>
+        /* Add your CSS styles here */
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #6d5dff, #71ffc3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            font-size: 36px;
+            margin: 20px 0;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        form:hover {
+            background-color: #fff; /* Change background color on hover */
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #6d5dff; /* Change border color on focus */
+        }
+
+        button[type="submit"] {
+            background-color: #6d5dff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #71ffc3; /* Change button color on hover */
+        }
+        
+        .whatsap{
+            background-color: #6d5dff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .whatsap:hover{
+            background-color: #71ffc3; }
+    </style>
+</head>
+<body>
+    <h1>Exotic Order Booking</h1>
+    <form id="booking-form">
+        <div class="form-group">
+            <label for="orderDate">Date of Order:</label>
+            <input type="date" id="orderDate" name="orderDate" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="mobileNumber">Mobile Number:</label>
+            <input type="tel" id="mobileNumber" name="mobileNumber" required>
+        </div>
+        <div class="form-group">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+        </div>
+        <div class="form-group">
+            <label for="eventPlace">Event Place:</label>
+            <input type="text" id="eventPlace" name="eventPlace" required>
+        </div>
+        <!-- Add more fields as needed -->
+        <div class="form-group">
+            <label for="eventType">Event Type:</label>
+            <select id="eventType" name="eventType">
+                <option value="wedding">Wedding</option>
+                <option value="birthday">Birthday</option>
+                <option value="corporate">Baby Shower</option>
+                <option value="corporate">Corporate</option>
+                <!-- Add more event types as needed -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="message">Additional Message:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+        </div>
+        <div class="form-group">
+            <a href="https://wa.link/5cbxsm" class="whatsap">submit</a>
+        </div>
+    </form>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('booking-form');
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                // Collect form data
+                const formData = new FormData(form);
+                const formDataObject = {};
+                formData.forEach((value, key) => {
+                    formDataObject[key] = value;
+                });
+
+                // You can now process or send the formDataObject as needed (e.g., via AJAX)
+
+                // For demonstration purposes, we'll log the data to the console
+                console.log('Form Data:', formDataObject);
+            });
+        });
+    </script>
+</body>
+</html>
